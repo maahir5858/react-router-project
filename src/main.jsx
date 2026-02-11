@@ -5,6 +5,8 @@ import Layout from './Layout.jsx';
 import Home from './components/pages/Home.jsx';
 import About from './components/pages/About.jsx';
 import Contact from './components/pages/Contact.jsx';
+import Navigate from './components/pages/Navigate.jsx';
+import Loader, { catFactsLoader } from './components/pages/Loader.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='navigate' element={<Navigate />} />
+      <Route path='loader' element={<Loader />} loader={catFactsLoader} />
     </Route>
   )
 )
