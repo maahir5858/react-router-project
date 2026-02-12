@@ -17,5 +17,6 @@ export default function Loader() {
 // eslint-disable-next-line react-refresh/only-export-components
 export async function catFactsLoader() {
     const response = await fetch('https://meowfacts.herokuapp.com');
+    if (!response.ok) throw new Error("Could not fetch response from api");
     return response.json();
 }

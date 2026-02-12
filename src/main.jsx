@@ -9,6 +9,7 @@ import Navigate from './components/pages/Navigate.jsx';
 import Loader, { catFactsLoader } from './components/pages/Loader.jsx';
 import RouteParameter from './components/pages/RouteParameter.jsx';
 import NotFound from './components/pages/NotFound.jsx';
+import Error from './components/pages/Error.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -40,7 +41,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='navigate' element={<Navigate />} />
-      <Route path='loader' element={<Loader />} loader={catFactsLoader} />
+      <Route path='loader' element={<Loader />} loader={catFactsLoader} errorElement={<Error />} />
       <Route path='route-parameter/:userId' element={<RouteParameter />} />
       <Route path='*' element={<NotFound />} />
     </Route>
