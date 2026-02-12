@@ -7,6 +7,8 @@ import About from './components/pages/About.jsx';
 import Contact from './components/pages/Contact.jsx';
 import Navigate from './components/pages/Navigate.jsx';
 import Loader, { catFactsLoader } from './components/pages/Loader.jsx';
+import RouteParameter from './components/pages/RouteParameter.jsx';
+import NotFound from './components/pages/NotFound.jsx';
 import './index.css'
 import App from './App.jsx'
 
@@ -39,6 +41,8 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact />} />
       <Route path='navigate' element={<Navigate />} />
       <Route path='loader' element={<Loader />} loader={catFactsLoader} />
+      <Route path='route-parameter/:userId' element={<RouteParameter />} />
+      <Route path='*' element={<NotFound />} />
     </Route>
   )
 )
